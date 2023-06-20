@@ -33,8 +33,7 @@ namespace CheshSumma
             var dialog = new OpenFileDialog();
             if (dialog.ShowDialog() == true)
             {
-                var file = File.ReadAllBytes(dialog.FileName);
-                var md5 = MD5.Create().ComputeHash(file);
+                var md5 = MD5.Create().ComputeHash(File.ReadAllBytes(dialog.FileName));
                 MessageBox.Show(BitConverter.ToString(md5));
             }
         }
