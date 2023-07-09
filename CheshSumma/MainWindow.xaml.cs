@@ -33,7 +33,7 @@ namespace CheshSumma
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            void Hashsumma()
+            static void Hashsumma()
             {
                 var dialog = new OpenFileDialog();
                 if (dialog.ShowDialog() == true)
@@ -42,8 +42,7 @@ namespace CheshSumma
                     MessageBox.Show(BitConverter.ToString(md5));
                 }
             }
-            ThreadStart threadStart = new ThreadStart(Hashsumma);
-            Thread thread = new Thread(threadStart);
+            Thread thread = new Thread(Hashsumma);
             thread.Start();
             Hashsumma();
 
