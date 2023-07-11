@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="HashSumma" HorizontalAlignment="Left" Margin="362,127,0,0" VerticalAlignment="Top" Width="207" Height="73" Click="Button_Click"/>
+        
 
     </Grid>
 </Window>
